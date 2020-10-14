@@ -1,25 +1,27 @@
-# RepositorioTemplate
-Esse repositório é para ser utilizado pelos grupos como um template inicial, da home page do Projeto.
-Demais diretrizes sobre a organização da wiki constam no Moodle Aprender 3.
-**!! Atenção: Renomeie o seu repositório para (Ano.Semestre)_(Grupo)_(NomeDoProjeto). !!** 
+<p align="center">
+    <img src="./assets/images/logo_woco_1.png" alt="Logo" height=300 width=400>
+</p>
 
-**!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: 2020.1_G1_ProjetoPandora!!**
- 
- (Apague essa seção)
+<h1 align="center">
+    WoCo - Workout Controller
+</h1>
 
-# NomedoProjeto
-
-**Número do Grupo**: XX<br>
+**Número do Grupo**: 09<br>
 **Código da Disciplina**: FGA0208-T01<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 17/0138551  | Bruno Henrique Sousa Duarte |
+| 15/0122837  |  Davi Alves Bezerra |
+| 17/0033112  |  Eugenio Sales Siqueira |
+| 16/0151732  |  Ernando da Silva Braga |
+| 13/0137995  |  Weiller Fernandes Pereira |
 
 ## Sobre 
-Descreva o seu projeto em linhas gerais. 
+Tendo em vista a dificuldade de gestão de treino por parte de praticamentes, principalmente, de musculação quanto a gestão da ficha de treinos, periodização e controla da evolução de cargas e métricas do corpo. O WoKo propõe-se a centralizar essas informações e disponibilizar um controle pleno e integral do treino dos usuários de musculação. A oportunidade de negócio encontra-se em tornar a percepção subjetica de esforço em um processo controlado e centralizado. 
+
+A aplicação permite a adição de treinos categorizados por grupamentos muscular de acordo a necessidade/prescrição de um profisional. Também é possível realizar agendamentos para delinear períodos de determinadas variações de treino, bem como, registrar medidas para acompanhamento de evolução.
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em termos de interface e funcionamento.
