@@ -1,7 +1,3 @@
-<p align="center">
-    <img src="./assets/images/logo_woco_1.png" alt="Logo" height=300 width=400>
-</p>
-
 <h1 align="center">
     WoCo - Workout Controller
 </h1>
@@ -23,20 +19,14 @@ Tendo em vista a dificuldade de gestão de treino por parte de praticamentes, pr
 
 A aplicação permite a adição de treinos categorizados por grupamentos muscular de acordo a necessidade/prescrição de um profisional. Também é possível realizar agendamentos para delinear períodos de determinadas variações de treino, bem como, registrar medidas para acompanhamento de evolução.
 
-## Screenshots
-Adicione 3 ou mais screenshots do projeto em termos de interface e funcionamento.
+## Setup
 
-## Instalação 
-**Linguagens**: xxxxxx<br>
-**Tecnologias**: xxxxxx<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
-Insira um manual ou um script para auxiliar ainda mais.
+1. Instale o Docker.
+2. Entre na pasta onde esta o projeto e rode ```docker-compose up```.
+3. Abra localhost:5000 no seu navegador.
 
-## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
-
-## Vídeo
-Adicione 1 ou mais vídeos com a execução do projeto final.
-
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+## Observações
+1. O Flask é executado no modo de desenvolvimento e será recarregado automaticamente nas alterações do arquivo.
+2. Use o requirements.txt para instalar bibliotecas no Python.
+3. Rode ```docker exec -it flask-woco bash``` para entrar no contêiner do Docker.
+4. Rode ```docker start|stop|logs -f flask-woco``` para controlar o contêiner do Docker e ver o log.
