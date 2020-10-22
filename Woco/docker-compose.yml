@@ -12,7 +12,7 @@ services:
     environment:
       - FLASK_ENV=development
       - FLASK_APP=/repo/app/__init__.py
-      - DATABASE=/repo/sqlite.db
+      - DATABASE=/repo/db/sqlite.db
 
     # Mount entire project into docker container under /repo
     volumes:

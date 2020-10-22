@@ -1,14 +1,17 @@
 import os
 from flask import Flask
 import sqlite3
+import db.database
+from db.database import SqliteDB
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    database = os.getenv('DATABASE', '/repo/sqlite.db')
-    conn = sqlite3.connect(database)
-    ret = conn.execute('select sqlite_version();').fetchall()
+    databaseUri = os.getenv('DATABASE', '/repo/db/sqlite.db')
+    conn = SqliteDB(databaseUri)
+    conn.execute('select sqlite_version();')
+    ret = conn.cursor.fetchall()
     conn.close()
     return '''
         <html>
