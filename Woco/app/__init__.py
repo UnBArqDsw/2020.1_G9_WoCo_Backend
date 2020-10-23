@@ -1,9 +1,11 @@
 import os
 from flask import Flask
+from flask_cors import CORS
 from .db.database import db
 from .routes.exercise import blueprint as ExerciseRoutes
 
 app = Flask(__name__)
+CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE')
 # initialize db with the flask app
 db.init_app(app)
