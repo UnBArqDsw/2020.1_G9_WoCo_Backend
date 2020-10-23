@@ -10,7 +10,7 @@ def createExerciseBlueprint(blueprintName: str):
   @blueprint.route('/api/exercise', methods = ["POST"])
   def addExercise():
     data = request.get_json()
-    newExercise = Exercise(id = str(uuid.uuid4()), data.name, data.instructions)
+    newExercise = Exercise(id = str(uuid.uuid4()), name = data["name"], instructions = data["instructions"])
     db.session.add(newExercise)
     db.session.commit()
     return jsonify(ExerciseSerializer.serialise(newExercise)), 201
