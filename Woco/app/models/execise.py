@@ -1,4 +1,4 @@
-from db.database import db
+from ..db.database import db
 import datetime
 
 class Exercise(db.Model):
