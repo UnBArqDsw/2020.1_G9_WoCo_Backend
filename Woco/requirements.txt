@@ -2,3 +2,4 @@ flask
 pysqlite3
 flask-sqlalchemy
 SQLAlchemy
+SQLAlchemy-serializer

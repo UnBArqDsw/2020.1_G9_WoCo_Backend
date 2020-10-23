@@ -15,6 +15,11 @@ def createExerciseBlueprint(blueprintName: str):
     db.session.commit()
     return jsonify(ExerciseSerializer.serialise(newExercise)), 201
 
+  @blueprint.route('/api/exercise', methods = ["GET"])
+  def loadExercises():
+    exercises = Exercise.query.all()
+    return jsonify(ExerciseSerializer.serialiseArray(exercises)), 201
+
   return blueprint
 
 blueprint = createExerciseBlueprint('exerciseBlueprint')

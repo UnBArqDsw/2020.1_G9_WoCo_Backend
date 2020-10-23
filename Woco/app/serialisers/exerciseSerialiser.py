@@ -7,3 +7,7 @@ class ExerciseSerializer:
       'instructions': resource.instructions,
       'created': resource.created.strftime("%Y-%m-%dT%H:%M:%S")
     }
+
+  @staticmethod
+  def serialiseArray(resources) -> dict:
+    return { 'data' : [ExerciseSerializer.serialise(resource) for resource in resources ]}

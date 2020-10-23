@@ -4,7 +4,7 @@ from .db.database import db
 from .routes.exercise import blueprint as ExerciseRoutes
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DB_URI'] = os.getenv('DATABASE')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE')
 # initialize db with the flask app
 db.init_app(app)
 
