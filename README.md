@@ -27,13 +27,19 @@ A aplicação permite a adição de treinos categorizados por grupamentos muscul
 Adicione 3 ou mais screenshots do projeto em termos de interface e funcionamento.
 
 ## Instalação 
-**Linguagens**: xxxxxx<br>
-**Tecnologias**: xxxxxx<br>
+**Linguagens**: Python<br>
+**Tecnologias**: SQLAlchemy, Flask, SQLite3<br>
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 Insira um manual ou um script para auxiliar ainda mais.
 
+### Como rodar o projeto
+Na pasta Woco:
+```Bash
+docker-compose up --build
+```
+
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+Acessar os endpoints da API a partir da porta 5000.
 
 ## Vídeo
 Adicione 1 ou mais vídeos com a execução do projeto final.
