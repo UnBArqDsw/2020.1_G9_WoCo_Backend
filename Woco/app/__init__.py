@@ -3,6 +3,8 @@ from flask import Flask
 from flask_cors import CORS
 from .db.database import db
 from .routes.exercise import blueprint as ExerciseRoutes
+from .routes.signUp import blueprint as SignUp
+
 
 app = Flask(__name__)
 CORS(app)
@@ -15,7 +17,9 @@ with app.app_context():
 
 # register blueprints or routes
 app.register_blueprint(ExerciseRoutes)
+app.register_blueprint(SignUp)
 
 if __name__ == "__main__":
   # app = createApp(os.getenv('DATABASE', 'repo/db/sqlite.db')) 
   app.run("0.0.0.0", port = 5000, debug = True)
+
