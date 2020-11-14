@@ -1,32 +1,33 @@
 from flask import Blueprint, jsonify, request
 from flask import Flask
+import sqlalchemy
 from flask_jwt import JWT, jwt_required, current_identity
 from werkzeug.security import safe_str_cmp
 from flask_jwt_extended import *
+from ..db.database import db
+from sqlalchemy.sql import exists
+from ..models.signUp import SignUp
 
 
 
-def tt(blueprintName: str):
+def Login(blueprintName: str):
 
     blueprint = Blueprint(blueprintName, __name__)
-    @blueprint.route('/api/protected', methods = ["GET"])
-    @jwt_required
-    def protected():
-        # Access the identity of the current user with get_jwt_identity
-        current_user = get_jwt_identity()
-        #return jsonify(logged_in_as=current_user), 200
-        return '%s' % current_identity
-
     @blueprint.route('/api/token', methods = ["POST"])
-    def test():
+    def LoginVerification():
     
-        username = request.json.get('username', None)
+        email = request.json.get('email', None)
         password = request.json.get('password', None)
 
-        access_token = create_access_token(identity=username)
-        return jsonify(access_token=access_token), 200
+        user = db.session.query(SignUp).filter_by(email=str(email), password=str(password)).first()
+
+        if(user is not None):
+            access_token = create_access_token(identity=email)
+            return jsonify(access_token=access_token, email=str(email), username=str(user.username)), 200
+        else:
+            return jsonify("User Not Found"), 404
 
 
     return blueprint
 
-blueprint = tt('tt')
+blueprint = Login('login')
