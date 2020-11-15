@@ -5,3 +5,5 @@ SQLAlchemy
 SQLAlchemy-serializer
 Flask-Cors
 shortuuid
+Flask-JWT
+Flask-JWT-Extended
